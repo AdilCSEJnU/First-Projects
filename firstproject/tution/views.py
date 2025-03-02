@@ -1,6 +1,6 @@
 from django.shortcuts import render , HttpResponse
 from .models import Contact,Post
-from .forms import ContactForm,PostForm
+from .forms import ContactForm, PostForm
 
 # Create your views here.
 def contact(request):

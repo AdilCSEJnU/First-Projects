@@ -35,7 +35,7 @@ class Post(models.Model):
         ('Urdu','Urdu'),
         ('Arabic','Arabic'),
     )
-    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True, null=True)
+    user=models.ForeignKey(User,on_delete=models.CASCADE, blank=True, null=True)
     id=models.AutoField(primary_key=True)
     title=models.CharField(max_length=101)
     slug=models.CharField(max_length=100, default=title)
@@ -58,5 +58,7 @@ class Post(models.Model):
             output_size=(300,300)
             img.thumbnail (output_size)
             img.save(self.image.path)
+    def __str__(self):
+        return self.title + "by : " + self.user.username
 
 
