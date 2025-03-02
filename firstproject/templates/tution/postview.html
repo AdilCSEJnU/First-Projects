@@ -1,0 +1,9 @@
+{% extends "basic.html" %}
+{% block body %}
+{% for p in poat %}
+{{p.title}}<br>
+<img src="{{p.image.url}}" alt="">
+
+<hr>
+{% endfor %}
+{% endblock body %}
